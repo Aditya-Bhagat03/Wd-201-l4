@@ -7,19 +7,19 @@ describe("Todo test cases", () => {
     const oneDay = 60 * 60 * 24 * 1000;
     [
       {
-        title: "Complete assignment",
+        title: "must Complete homeWork",
         completed: false,
         dueDate: new Date(today.getTime() - 1 * oneDay).toLocaleDateString(
           "en-CA"
         ),
       },
       {
-        title: "Go for shopping",
+        title: "Go to gym",
         completed: false,
         dueDate: new Date().toLocaleDateString("en-CA"),
       },
       {
-        title: "Complete project",
+        title: "Complete pending work",
         completed: false,
         dueDate: new Date(today.getTime() + 1 * oneDay).toLocaleDateString(
           "en-CA"
@@ -39,21 +39,21 @@ describe("Todo test cases", () => {
     expect(all.length).toEqual(4);
   });
 
-  test("Todo mark as complete", () => {
+  test("should mark as complete", () => {
     expect(all[0].completed).toEqual(false);
     markAsComplete(0);
     expect(all[0].completed).toEqual(true);
   });
 
-  test("Test for overdue", () => {
+  test("retrivel of overdue", () => {
     expect(overdue().length).toEqual(1);
   });
 
-  test("Test due today", () => {
+  test("retrivel of due today", () => {
     expect(dueToday().length).toEqual(2);
   });
 
-  test("Test for due later", () => {
+  test("retrivel of test today", () => {
     expect(dueLater().length).toEqual(1);
   });
 });
