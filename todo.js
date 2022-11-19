@@ -1,7 +1,3 @@
-/* eslint-disable semi */
-/* eslint-disable comma-dangle */
-/* eslint-disable quotes */
-/* eslint-disable prefer-const */
 const todoList = () => {
   let all = [];
   const add = (todoItem) => {
